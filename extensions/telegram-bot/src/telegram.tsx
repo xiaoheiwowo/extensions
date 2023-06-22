@@ -7,6 +7,7 @@ export async function sendMessage(message: string, userID: string, botToken: str
   params.append("chat_id", userID);
   params.append("text", message);
   url += params.toString();
+  console.log(url);
   await axios
     .get(url)
     .then(function (response: any) {
